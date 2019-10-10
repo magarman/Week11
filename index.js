@@ -1,6 +1,7 @@
 //requires
 var inquirer = require("inquirer");
 
+//use the word file 
 var Word = require("./word.js");
 var figlet = require('figlet');
 var chalk = require('chalk');
@@ -34,7 +35,7 @@ function guessWord() {
         inquirer.prompt([
             {
                 name: "txt",
-                message: "Guess a letter",
+                message: "Guess a letter!",
                 validate: function (str) {
                     if (str.length != 1) return false;
                     var regEx = new RegExp("^[a-zA-Z\s]{1,1}$");
